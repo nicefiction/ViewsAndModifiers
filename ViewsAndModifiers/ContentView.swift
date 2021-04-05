@@ -9,6 +9,32 @@ import SwiftUI
 
 
 
+struct BlueHeader: ViewModifier {
+    
+    func body(content: Content)
+    -> some View {
+        
+        return content
+            .font(.system(size : 43 ,
+                          weight : .heavy ,
+                          design : .rounded))
+            .foregroundColor(.blue)
+    }
+}
+
+
+
+extension View {
+    
+    func applyBlueHeader()
+    -> some View {
+        
+        return self.modifier(BlueHeader())
+    }
+}
+
+
+
 
 
  // //////////////////////////////////
@@ -21,19 +47,13 @@ struct ContentView: View {
     
     var body: some View {
         
-        Text("Hello, world!")
-            /**
-             `NOTE` : Using `maxWidth` and `maxHeight`
-             is different from using `width` and `height`
-             – we are not saying the text view must take up all that space ,
-             only that it _can_ .
-             If you have other views around ,
-             SwiftUI will make sure they all get enough space .
-             */
-            .frame(maxWidth : .infinity ,
-                   maxHeight : .infinity)
-            .background(Color.red)
-            .edgesIgnoringSafeArea(.all)
+        VStack(spacing : 20) {
+            Text("Hello World")
+                .modifier(BlueHeader())
+            
+            Text("Hello Again")
+                .applyBlueHeader()
+        }
     }
 }
 

@@ -22,7 +22,6 @@ struct CustomContainers: View {
             
             GridStack(rows : 2 ,
                       columns : 2) { (row: Int , column: Int) in
-                
                 /**
                  Our `GridStack` is capable of accepting any kind of cell content ,
                  as long as it conforms to the `View protocol` . So ,
@@ -42,7 +41,6 @@ struct CustomContainers: View {
             
             GridStack(rows : 2 ,
                       columns : 2) { (row: Int , column: Int) in
-                
                 /**
                  `*` ...  SwiftUI will now automatically create
                  an implicit `HSack` inside our cell closure :
@@ -58,6 +56,8 @@ struct CustomContainers: View {
         }
     }
 }
+
+
 
 
 
