@@ -1,23 +1,12 @@
-// MARK: ContentView.swift
-
-
-
- // ////////////////
-//  MARK: LIBRARIES
+// 2
+/* SOURCE : https://www.hackingwithswift.com/books/ios-swiftui/what-is-behind-the-main-swiftui-view
+ */
 
 import SwiftUI
 
 
 
-
-
- // //////////////////////////////////
-//  MARK: struct ContentView: View { }
-
-struct ContentView: View {
-    
-     // //////////////////////////
-    //  MARK: COMPUTED PROPERTIES
+struct BehindTheMainSwiftUIView: View {
     
     var body: some View {
         
@@ -41,13 +30,10 @@ struct ContentView: View {
 
 
 
- // ///////////////
-//  MARK: PREVIEWS
-
-struct ContentView_Previews: PreviewProvider {
+struct BehindTheMainSwiftUIView_Previews: PreviewProvider {
     
     static var previews: some View {
         
-        ContentView().previewDevice("iPhone 12 Pro")
+        BehindTheMainSwiftUIView().previewDevice("iPhone 12 Pro")
     }
 }
